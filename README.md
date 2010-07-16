@@ -4,23 +4,23 @@ Simple Ruby-style inheritance for JavaScript
 ## Example
 
 	def ("Person") ({
-		init: function(name){
-			this.name = name;
-		},
-		
-		speak: function(text){
-			alert(text || "Hi, my name is " + this.name);
-		}
+	    init: function(name){
+	        this.name = name;
+	    },
+	
+	    speak: function(text){
+	        alert(text || "Hi, my name is " + this.name);
+	    }
 	});
 	
 	def ("Ninja") << Person ({
-		init: function(name){
-			this._super();
-		},
-		
-		kick: function(){
-			this.speak("I kick u!");
-		}
+	    init: function(name){
+	        this._super(name);
+	    },
+	
+	    kick: function(){
+	        this.speak("I kick u!");
+	    }
 	});
 	
 	var ninjy = new Ninja("JDD");

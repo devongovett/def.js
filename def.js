@@ -29,7 +29,7 @@
     
     // based on http://github.com/shergin/legacy by shergin
     function base() {
-        var caller = base.caller;
+        var caller = arguments.callee.caller; //cross browser support > strict mode support
         // call same method as its caller but in the superclass
         return caller._class._super.prototype[caller._name].apply(this, arguments);	
     }
