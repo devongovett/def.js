@@ -28,8 +28,8 @@
     // calls same method as its caller but in the superclass
     // based on http://github.com/shergin/legacy by shergin
     function base() {
-		// cross browser support > strict mode compatibility
-		var caller = arguments.callee.caller;
+        // cross browser support > strict mode compatibility
+        var caller = arguments.callee.caller;
         // call same method as its caller but in the superclass
         return caller._class._super.prototype[caller._name].apply(this, arguments.length ? arguments : arguments.callee.caller.arguments);
     }
