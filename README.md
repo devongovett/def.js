@@ -15,7 +15,7 @@ Simple Ruby-style inheritance for JavaScript
 	
 	def ("Ninja") << Person ({
 	    init: function(name){
-	        this._super(name);
+	        this._super(); //name will automatically be passed if no arguments given
 	    },
 	
 	    kick: function(){
